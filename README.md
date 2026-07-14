@@ -1,102 +1,83 @@
-# Personal Portfolio Site
+# Hi, I'm Ramisa Fariha Mridha
 
-A single-page academic/research portfolio site, built as plain HTML, CSS,
-and a few lines of JS — no build step, no framework, deploys directly on
-GitHub Pages.
+Machine learning researcher with an MSc in Biomedical Engineering
+(University of Oulu, Finland), specialising in deep learning, computer
+vision, and multimodal data analysis. My research at the Center for
+Machine Vision and Signal Analysis (CMVS) spans transformer-based
+architectures for multi-sequence image segmentation, affective
+computing, and applying deep learning to biosignal and image data.
 
-## Deploying on GitHub Pages
+I'm currently seeking PhD and research positions in medical image
+analysis, computational imaging, and applied deep learning.
 
-GitHub Pages serves a personal site from a repository with a very
-specific name: `<your-github-username>.github.io`. It has to match your
-username exactly, or Pages will serve it as a project site under a
-subpath instead of at the root domain.
+- **Email:** rf.mridha.13@gmail.com
+- **ORCID:** [0009-0001-5194-586X](https://orcid.org/0009-0001-5194-586X)
+- **LinkedIn:** [ramisa-fariha-mridha](https://www.linkedin.com/in/ramisa-fariha-mridha-6a25a01ab)
+- **GitHub:** [@Ramisa13](https://github.com/Ramisa13)
 
-1. Create a new repository on GitHub named exactly:
-   ```
-   <your-github-username>.github.io
-   ```
-   (replace `<your-github-username>` with your actual GitHub username —
-   e.g. if your username is `ramisamridha`, the repo must be named
-   `ramisamridha.github.io`).
+## Research
 
-2. Push this project to it:
-   ```bash
-   cd ramisa-portfolio
-   git init
-   git add .
-   git commit -m "Initial commit: personal portfolio site"
-   git branch -M main
-   git remote add origin https://github.com/<your-github-username>/<your-github-username>.github.io.git
-   git push -u origin main
-   ```
+First author of a manuscript under review at *Information Fusion*
+(Elsevier) benchmarking deep learning architectures for myocardial
+infarction segmentation on cardiac MRI. My master's thesis (assessed 5/5,
+Excellent) developed a novel deep learning method for multi-sequence
+cardiac MRI segmentation — full details are being held back until the
+related journal submission is out.
 
-3. In the repository on GitHub, go to **Settings → Pages**, and under
-   "Build and deployment," set **Source** to "Deploy from a branch,"
-   branch `main`, folder `/ (root)`. Save.
+## Projects
 
-4. Your site will be live within a minute or two at:
-   ```
-   https://<your-github-username>.github.io
-   ```
+Deep learning coursework and independent projects, all with full code,
+documentation, and (where applicable) verified results:
 
-No further configuration is needed — GitHub Pages serves `index.html`
-directly from the repo root.
+- **[Transfer Learning for Diabetic Retinopathy Detection](https://github.com/Ramisa13/dr-transfer-learning)** — fine-tuning, two-stage training, self-attention, ensembling, and Grad-CAM explainability on the DeepDRiD dataset.
+- **[FaceForge: DCGAN Transfer Learning](https://github.com/Ramisa13/faceforge-dcgan)** — a DCGAN pretrained on CelebA and fine-tuned to generate AnimeFace-style images.
+- **[ThreadNet: CNN for Fashion-MNIST](https://github.com/Ramisa13/threadnet-fashion-cnn)** — a LeNet-style convolutional network with a custom stratified-split dataset class.
+- **[PureGrad: From-Scratch Neural Network](https://github.com/Ramisa13/puregrad-fashion-mnist)** — a fully NumPy feedforward network with hand-derived backpropagation, verified against finite-difference gradient checks.
+- **[AdCurve: Linear Regression from Scratch](https://github.com/Ramisa13/adcurve-linear-regression)** — multivariate linear regression built without `nn.Linear`, trained with gradient descent.
 
-## Before you publish: things to fill in
+## About this repository
 
-**Add your photo and CV.** The hero and contact sections both reference
-`assets/profile.jpg`, and the hero has a "Download CV" button pointing at
-`assets/CV.pdf`. Neither file exists yet — drop your own headshot in as
-`assets/profile.jpg` (a square-ish crop works best, since it's displayed
-in a circle) and your CV as `assets/CV.pdf`. Until you add `CV.pdf`, that
-button will 404, so either add the file or remove the button:
-```html
-<a href="assets/CV.pdf" class="pill pill-solid" target="_blank" rel="noopener">Download CV</a>
-```
+This repo is the source for my personal site at
+[ramisa13.github.io](https://ramisa13.github.io) — a single-page HTML,
+CSS, and vanilla JS build (no framework, no build step) covering my
+background, education, experience, research, projects, skills, awards,
+and contact details, structured so a recruiter or hiring committee can
+get a complete picture in one pass.
 
-Search the project for `YOUR-GITHUB-USERNAME` and `YOUR-LINKEDIN` in
-`index.html` and replace them with your actual GitHub username and
-LinkedIn handle — these appear in the hero links, contact section, and
-every project card's link.
-
-Also double check:
-- The email address in the two `mailto:` links is current.
-- The project links point at repositories you've actually pushed
-  (`dr-transfer-learning`, `faceforge-dcgan`, `threadnet-fashion-cnn`,
-  `puregrad-fashion-mnist`, `adcurve-linear-regression`) — if any aren't
-  public yet, either make them public or remove that card.
-- The research section's wording matches what you're comfortable making
-  public — it currently describes the thesis and benchmarking manuscript
-  in general terms, consistent with keeping architecture-level details
-  unpublished until the papers are out.
-
-## Structure
 ```
 ramisa-portfolio/
 ├── index.html      all page content and section markup
 ├── style.css        design system: colors, type, layout, the scan-line hero motif
 ├── script.js          sets the footer year
-└── assets/            (empty — drop a resume PDF or headshot here if you want one linked)
+└── assets/
+    ├── CV.pdf          downloadable CV
+    └── profile.jpg      headshot (add your own — see below)
 ```
 
-## Local preview
-No build tooling required — just open `index.html` in a browser, or serve
-it locally:
+### Deploying changes
+
+The site is served directly by GitHub Pages from this repo. To make
+changes: edit the files, then commit and push to `main` —
+
+```bash
+git add .
+git commit -m "Update site"
+git push
+```
+
+GitHub Pages picks up the change automatically within a minute or two.
+
+### Still to add
+
+- `assets/profile.jpg` — a headshot, square-ish crop recommended since
+  it's displayed in a circle. The site works fine without it; the frame
+  just stays empty until the file is added.
+
+### Local preview
+
+No build tooling required:
+
 ```bash
 python -m http.server 8000
 # then visit http://localhost:8000
 ```
-
-## Design notes
-The layout uses a clinical, editorial palette (cool off-white background,
-navy ink, a single teal accent) rather than a generic dark-mode or
-warm-cream template, and the hero's horizontal "scan lines" with a
-sweeping highlight are a nod to the MRI-slice imagery central to the
-research the site describes — a deliberate, subject-specific detail
-rather than decoration. Motion respects `prefers-reduced-motion`, and all
-interactive elements have visible keyboard focus states.
-
-Fonts are loaded from Google Fonts (Spectral for headings, IBM Plex Sans
-for body text, IBM Plex Mono for labels and metadata) — swap the
-`<link>` tags in `index.html` and the `--font-*` variables in `style.css`
-if you'd rather self-host or use different typefaces.
