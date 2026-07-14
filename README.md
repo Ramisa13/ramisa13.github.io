@@ -13,7 +13,7 @@ subpath instead of at the root domain.
 
 1. Create a new repository on GitHub named exactly:
    ```
-   <your-github-username>.github.io
+   Ramisa13.github.io
    ```
    (replace `<your-github-username>` with your actual GitHub username —
    e.g. if your username is `ramisamridha`, the repo must be named
