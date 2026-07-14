@@ -1,0 +1,2 @@
+- CV.pdf       already included (converted from CV_Ramisa_Mridha_CMVS.docx)
+- profile.jpg  still needed — your headshot, square-ish crop recommended (displayed in a circle)
