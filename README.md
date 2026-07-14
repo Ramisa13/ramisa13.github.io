@@ -21,7 +21,7 @@ First author of a manuscript under review at *Information Fusion*
 (Elsevier) benchmarking deep learning architectures for myocardial
 infarction segmentation on cardiac MRI. My master's thesis (assessed 5/5,
 Excellent) developed a novel deep learning method for multi-sequence
-cardiac MRI segmentation — full details are being held back until the
+cardiac MRI segmentation :full details are being held back until the
 related journal submission is out.
 
 ## Projects
